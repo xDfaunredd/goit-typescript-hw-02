@@ -2,12 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      gridTemplateRows: {
-        // Simple 16 row grid
-        16: "repeat(16, minmax(100px , 1fr))",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
