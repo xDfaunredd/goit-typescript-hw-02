@@ -1,0 +1,14 @@
+.modalOverlay {
+  background-color: #000000bd;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: transparent;
+  border: none;
+}
