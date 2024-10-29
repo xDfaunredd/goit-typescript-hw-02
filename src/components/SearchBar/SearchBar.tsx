@@ -1,4 +1,4 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Form, Formik, FormikHelpers } from "formik";
 import toast from "react-hot-toast";
 
 type Props = {
@@ -9,23 +9,21 @@ type InitialValues = {
   searchField: string;
 };
 
-type ResetFrom = {
-  resetForm: () => void;
-};
-
 const initialValues: InitialValues = {
   searchField: "",
 };
 
 const SearchBar = ({ resetValues }: Props) => {
-  function handleSubmit(values: InitialValues, actions: ResetFrom) {
+  function handleSubmit(
+    values: InitialValues,
+    actions: FormikHelpers<InitialValues>
+  ) {
     if (values.searchField === "") {
       toast.error("Enter th request");
     }
     if (values.searchField !== "") {
       resetValues(values.searchField);
     }
-    console.log(values);
 
     actions.resetForm();
   }

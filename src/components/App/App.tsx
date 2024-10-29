@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 import { Data, Response } from "../types/types";
-import { fetchFunc } from "../fetchFunc/fetchFunc";
+import { fetchFunc } from "../../services/fetchFunc/fetchFunc";
 
 import SearchBar from "../SearchBar/SearchBar";
 import LoadMore from "../LoadMore/LoadMore";
@@ -20,7 +20,7 @@ function App() {
   const [error, setError] = useState<unknown>();
 
   useEffect(() => {
-    async function fetchData(): Promise<void | string> {
+    async function fetchData() {
       if (!query.trim()) {
         setIsVisible(false);
         return;
@@ -33,10 +33,10 @@ function App() {
         if (data.total_pages === 0) {
           setLoading(false);
 
-          return toast.error(`Wrong request , there are no ${query}`);
+          toast.error(`Wrong request , there are no ${query}`);
+          return;
         }
 
-        console.log(data);
         setImages((prev) => [...prev, ...data.results]);
         setLoading(false);
 

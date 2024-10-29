@@ -12,7 +12,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const myContext = createContext<MyContext | undefined>(undefined);
+export const myContext = createContext<MyContext>({
+  isOpen: false,
+  url: "",
+  openModal: () => {},
+  closeModal: () => {},
+  fullImage: () => {},
+});
 
 const MyContext = ({ children }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

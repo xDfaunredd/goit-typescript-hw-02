@@ -1,4 +1,4 @@
-import { useMyContext } from "../hooks/useMyContext/useMyContext";
+import { useMyContext } from "../../hooks/useMyContext/useMyContext";
 import { Data } from "../types/types";
 
 type Prop = {

@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Response } from "../types/types";
+import { Response } from "../../components/types/types";
 
 const API_KEY: string = "CAftz2JgwT_q1UBO6KMjgwOTvS66qJk9oaV9Nj4H-nY";
 

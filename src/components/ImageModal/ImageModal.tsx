@@ -1,6 +1,6 @@
 import ReactModal from "react-modal";
 import s from "./ImageModal.module.css";
-import { useMyContext } from "../hooks/useMyContext/useMyContext";
+import { useMyContext } from "../../hooks/useMyContext/useMyContext";
 
 ReactModal.setAppElement("#root");
 const ImageModal = () => {
